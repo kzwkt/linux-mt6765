@@ -26,8 +26,8 @@ jobs:
           body: "This release includes the latest build  kernel."
           files: |
             out/arch/arm64/boot/Image.gz
-            out/arch/arm64/boot/dts/mediatek/mt6765.dtb
-            out/arch/arm64/boot/dts/mediatek/oppo6765_206A1.dtbo
+            kernel.tar.gz
+          
             
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
