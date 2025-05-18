@@ -19,3 +19,4 @@ make -j$(nproc --all) ARCH=arm64 O=out \
 mkdir dist
 make INSTALL_MOD_PATH=dist modules_install
 make INSTALL_PATH=dist install
+tar -czf  dist kernel.tar.gz
