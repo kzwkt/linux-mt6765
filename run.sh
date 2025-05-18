@@ -17,6 +17,7 @@ make -j$(nproc --all) ARCH=arm64 O=out \
                       CROSS_COMPILE_ARM32=arm-linux-gnueabi-
 
 mkdir dist
-make INSTALL_MOD_PATH=dist modules_install
-make INSTALL_PATH=dist install
-tar -czf  dist kernel.tar.gz
+make O=out INSTALL_MOD_PATH=dist modules_install
+make O=out INSTALL_PATH=dist install
+cd dist
+tar -czf ../kernel.tar.gz .
