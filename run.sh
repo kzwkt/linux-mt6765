@@ -15,3 +15,7 @@ make -j$(nproc --all) ARCH=arm64 O=out \
                       CC="ccache clang" \
                       CROSS_COMPILE=aarch64-linux-gnu- \
                       CROSS_COMPILE_ARM32=arm-linux-gnueabi-
+
+mkdir dist
+make INSTALL_MOD_PATH=dist modules_install
+make INSTALL_PATH=dist install
